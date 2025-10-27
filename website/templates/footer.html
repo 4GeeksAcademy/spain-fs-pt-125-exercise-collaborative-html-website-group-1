@@ -1,7 +1,71 @@
-<footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p>Copyright &copy; Your Website Name 2021</p>
-        </div>
-    </div>
+<footer class="bg-dark text-center py-4 mt-5 position-relative overflow-hidden text-light">
+  <div class="container">
+    <h5 class="fw-bold mb-2 text-uppercase neon-text" style="font-family: 'ScarfaceStyle', sans-serif;">
+      ⚔️ “Primero compila el respeto, luego debuguea el dinero... y después ejecutas el poder.” 💵
+    </h5>
+    <p class="fst-italic mb-3 text-white-50" style="font-family: 'ScarfaceStyle', sans-serif;">
+       Hecho con café, risas y un toque de locura... al estilo Tony Montana. 🚬
+    </p>
+    <hr class="opacity-75 w-50 mx-auto" style="border-color: #ff2b2b;">
+    <p class="mb-0" style="font-family: 'ScarfaceStyle', sans-serif;">
+      © <span class="fw-bold" style="color: #ff2b2b;">Napoles, Diego, Jorge & Crystian</span> —
+      <span class="text-white-50">Todos los derechos reservados... (si el cartel nos deja)</span>
+    </p>
+  </div>
+
+  <style>
+    @font-face {
+      font-family: 'ScarfaceStyle';
+      src: url('fonts/Lency-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* 🔥 Animación de entrada */
+    footer {
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 🌃 Fondo sutil con luz roja */
+    footer::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 43, 43, 0.05) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      100% { transform: scale(1.2); opacity: 0.6; }
+    }
+
+    footer .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 💡 Efecto neón solo en hover */
+    .neon-text {
+      color: #ff2b2b;
+      text-shadow: none;
+      transition: all 0.3s ease;
+    }
+
+    .neon-text:hover {
+      text-shadow:
+        0 0 10px #ff2b2b,
+        0 0 20px #ff2b2b,
+        0 0 40px #ff2b2b,
+        0 0 60px #ff2b2b;
+      transform: scale(1.03);
+    }
+  </style>
 </footer>
